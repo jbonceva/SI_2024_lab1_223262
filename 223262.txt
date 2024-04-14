@@ -1,0 +1,51 @@
+1.Инсталирав Git и направив Github профил со username jbonceva.
+  -се претставив на Git
+     $git config --global user.name "Jordana Bonceva"
+     $git config --global user.email "jjordana193@gmail.com"
+2.Потоа во мојот account Settings во Repositories во Repository default branch го променив името на главната гранка од main во master.
+3.Креирав оддалечен репозиториум на GitHub во форматот SI_2024_lab1_223262, и избав опција да е приватен репозиториум.
+4.Креирав локалниот репозиториум -mkdir SI_2024_lab1_223262
+  Влегов во него -cd SI_2024_lab1_223262
+  И го иницијализирав  $git init
+5.За да го поврзам локалниот репозиториум со оддалечениот репозиториум направив $git remote add origin https://github.com/jbonceva/SI_2024_lab1_223262.git
+  Проверка на fetch i push ($git remote -v)
+6.Креирав датотека README.md во мојот локален репозиториум со nano README.md и се потпиав (име, презиме и број на индекс). Потоа, ги извршив следните команди:
+  $git add README.md
+  $git commit -m "Initial commit"(Направив commit со порака Initial commit)
+7.Ги превземав трите фалјови и ги додадов во мојот локален репозиториум па потоа направив commit со порака Add starter code:
+  $git add .
+  $git commit -m "Add starter code"
+8. Синхронизирајте ги сите гранки со оддалечениот репозиториум -$git push --all origin
+9. Отворив две нови гранки 
+   $git branch bug1 
+   $git branch bug2
+10.Се префрлив на гранката bug1 преку $git checkout bug1
+11.Ја поправив грешката во методот filterOddLengthStrings и направив:
+   $git add SILab1_1.java
+   $git commit -m "Fix wrong condition in filterOddLengthStrings"
+12.Се префрлив на гранката bug2 преку $git checkout bug2
+13.Ја поправив грешката во методот filterOddLengthStrings и направив:
+   $git add SILab1_2.java
+   $git commit -m "Fix wrong condition in makeBigStringFrom"
+14.Се префрлив на гранката bug1 преку $git checkout bug1
+15.Во класата SILab1Main, после for циклусот, во линија 16, додадов повик до статичкиот метод filterOddLengthStrings System.out.println(SILab1_1.filterOddLengthStrings(list));
+   $git add SILab1Main.java
+   $git commit -m "Call method filterOddLengthStrings in main class"
+16.Се префрлив на гранката bug2 преку $git checkout bug2
+17.Во класата SILab1Main, после for циклусот, во линија 16, додадете повик до статичкиот метод makeBigStringFrom System.out.println(SILab1_2.makeBigStringFrom(list));
+   $git add SILab1Main.java
+   $git commit -m "Call method makeBigStringFrom in main class"
+18.Синхронизирајте ги сите гранки со оддалечениот репозиториум -$git push --all origin
+19.Се префрлив на гранката master преку $git checkout master
+20.Ја споив гранката bug1 кон гранката master преку командата $git merge bug1(Fast-forward)
+21.Синхронизирајте ги сите гранки со оддалечениот репозиториум -$git push --all origin
+22.Се префрлив на гранката bug2 преку $git checkout bug2
+23.Правење rebase спрема гранката master (едниот системски повик остана во кодот, а другиот е избришан) git rebase master 
+24.префрлување на гранката master git checkout master => 
+25.спојување на гранката bug2 кон гранката master (нема конфликт) git merge bug2 
+26.Синхронизирајте ги сите гранки со оддалечениот репозиториум -$git push --all origin
+27.git push --force origin bug2 =>Синхронизирајте ги сите гранки со оддалечениот репозиториум -force
+28.git log > logs.txt => додавање на датотека logs.txt во која ги има сите досегашни git логови
+29.Синхронизирајте ги сите гранки со оддалечениот репозиториум -$git push --all origin
+
+
